@@ -1,15 +1,15 @@
 
 public class Movie {
-	/*1. »ı¼ºÀÚ 3°³( ±âº»»ı¼ºÀÚ / ¸Å°³º¯¼ö »ı¼ºÀÚ / ÂüÁ¶º¯¼ö ÀÌ¿ëÇÑ »ı¼ºÀÚ)
-    2. ¸â¹öº¯¼ö title / director / actor / genre / year / age_limit ...
-    3. ¸Ş¼Òµå getter/setter Á¦¿ÜÇÏ°í 3°³ 
-    4. main ÇÔ¼ö¿¡¼­ ±¸ÇöÇÑ ³»¿ë º¸ÀÌ±â*/
+	/*1. ìƒì„±ì 3ê°œ( ê¸°ë³¸ìƒì„±ì / ë§¤ê°œë³€ìˆ˜ ìƒì„±ì / ì°¸ì¡°ë³€ìˆ˜ ì´ìš©í•œ ìƒì„±ì)
+    2. ë©¤ë²„ë³€ìˆ˜ title / director / actor / genre / year / age_limit ...
+    3. ë©”ì†Œë“œ getter/setter ì œì™¸í•˜ê³  3ê°œ 
+    4. main í•¨ìˆ˜ì—ì„œ êµ¬í˜„í•œ ë‚´ìš© ë³´ì´ê¸°*/
 	String title; String director; String actor; String genre;
 	int year; int age_limit;
-	Movie(){ //±âº»»ı¼ºÀÚ
-    	this("°Ü¿ï¿Õ±¹2","¿¤»ç",3,"´©±º°¡","¾Ö´Ï",2019);
+	Movie(){ //ê¸°ë³¸ìƒì„±ì
+    	this("ê²¨ìš¸ì™•êµ­2","ì—˜ì‚¬",3,"ëˆ„êµ°ê°€","ì• ë‹ˆ",2019);
     }
-	Movie(String title, String actor, int age_limit, String director, String genre, int year){ //¸Å°³º¯¼ö »ı¼ºÀÚ
+	Movie(String title, String actor, int age_limit, String director, String genre, int year){ //ë§¤ê°œë³€ìˆ˜ ìƒì„±ì
 		this.title=title;
 		this.actor=actor;
 		this.age_limit=age_limit;
@@ -17,7 +17,7 @@ public class Movie {
 		this.genre=genre;
 		this.year=year;
 	}
-	Movie(Movie m){ //ÂüÁ¶º¯¼ö ÀÌ¿ëÇÑ »ı¼ºÀÚ
+	Movie(Movie m){ //ì°¸ì¡°ë³€ìˆ˜ ì´ìš©í•œ ìƒì„±ì
 		this.title=m.title;
 		this.actor=m.actor;
 		this.age_limit=m.age_limit;
@@ -30,15 +30,15 @@ public class Movie {
 	public static void main(String[] args) {
         
 		Movie m1=new Movie();
-        Movie m2=new Movie("³ÊÀÇ ÀÌ¸§Àº","±è¶¯¶¯",12,"ÀÏº»ÀÎ","¾Ö´Ï",2017);	
+        Movie m2=new Movie("ë„ˆì˜ ì´ë¦„ì€","ê¹€ë•¡ë•¡",12,"ì¼ë³¸ì¸","ì• ë‹ˆ",2017);	
         Movie m3=new Movie(m2);
 		m1.print();
 		m2.print();
 		m3.print();
 	}
 	void print() {
-		System.out.println("Á¦¸ñ: "+title+", ÁÖ¿¬: "+"actor"+", ¿¬·É Á¦ÇÑ: "+age_limit+" "
-				+", °¨µ¶: "+director+", Àå¸£: "+genre+", °³ºÀ ³âµµ: "+year);
+		System.out.println("ì œëª©: "+title+", ì£¼ì—°: "+actor+", ì—°ë ¹ ì œí•œ: "+age_limit+" "
+				+", ê°ë…: "+director+", ì¥ë¥´: "+genre+", ê°œë´‰ ë…„ë„: "+year);
 	}
 	
 
